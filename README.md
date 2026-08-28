@@ -1,4 +1,4 @@
-# Urban Heat Island (UHI) Prediction using Machine Learning for mumbai
+# Urban Heat Island (UHI) Prediction using Machine Learning for Mumbai
 
 ![UHI Predictions and Spatial Anomalies](assets/uhi_anomalies_map.png)
 
@@ -59,8 +59,8 @@ Models were evaluated on an unseen 20% test split:
 ## 🗺️ Spatial Anomaly Detection
 
 By comparing actual satellite thermal observations against the XGBoost predictions:
-* **Blue Regions (Negative Anomalies):** Areas significantly cooler than predicted (e.g., river corridors, irrigated patches, shaded valleys).
-* **Red Regions (Positive Anomalies):** Localized hotspots where temperatures exceed what vegetation and concrete indices alone predict. These pinpoint localized industrial activity, metal roofing, or extreme heat retention zones requiring targeted urban cooling interventions.
+* **Negative Anomalies (Cooler):** Areas cooler than predicted (e.g., water bodies, vegetative patches, shaded zones).
+* **Positive Anomalies (Hotter):** Localized hotspots where temperatures exceed what vegetation and concrete indices alone predict. These pinpoint localized industrial activity, metal roofing, or extreme heat retention zones requiring targeted urban cooling interventions.
 
 ---
 
