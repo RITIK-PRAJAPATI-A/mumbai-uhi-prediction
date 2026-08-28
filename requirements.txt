@@ -1,0 +1,6 @@
+geemap
+earthengine-api
+pandas
+xgboost
+scikit-learn
+matplotlib
