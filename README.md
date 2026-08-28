@@ -34,9 +34,9 @@ Traditional Urban Heat Island (UHI) studies rely primarily on descriptive therma
 * **Cloud & Shadow Filtering:** Applied bitwise masking via the `QA_PIXEL` band (bits 0–4) to eliminate clouds, cirrus, and cloud shadows.
 * **Feature Set:**
   * **NDVI (Normalized Difference Vegetation Index):** Measures vegetative cooling.
-    $$\text{NDVI} = \frac{\text{SR\_B5} - \text{SR\_B4}}{\text{SR\_B5} + \text{SR\_B4}}$$
+    $$\text{NDVI} = \frac{\text{SR}_{B5} - \text{SR}_{B4}}{\text{SR}_{B5} + \text{SR}_{B4}}$$
   * **NDBI (Normalized Difference Built-up Index):** Measures impervious and built-up concrete surfaces.
-    $$\text{NDBI} = \frac{\text{SR\_B6} - \text{SR\_B5}}{\text{SR\_B6} + \text{SR\_B5}}$$
+    $$\text{NDBI} = \frac{\text{SR}_{B6} - \text{SR}_{B5}}{\text{SR}_{B6} + \text{SR}_{B5}}$$
   * **Target Variable (LST):** Derived from scaled thermal band `ST_B10` and converted to degrees Celsius (°C).
 
 ---
@@ -78,3 +78,24 @@ By comparing actual satellite thermal observations against the XGBoost predictio
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/RITIK-PRAJAPATI-A/mumbai-uhi-prediction.git
+cd mumbai-uhi-prediction
+```
+
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Authenticate Earth Engine & Run
+```bash
+python -c "import ee; ee.Authenticate()"
+jupyter notebook notebooks/main.ipynb
+```
