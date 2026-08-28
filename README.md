@@ -34,9 +34,9 @@ Traditional Urban Heat Island (UHI) studies rely primarily on descriptive therma
 * **Cloud & Shadow Filtering:** Applied bitwise masking via the `QA_PIXEL` band (bits 0–4) to eliminate clouds, cirrus, and cloud shadows.
 * **Feature Set:**
   * **NDVI (Normalized Difference Vegetation Index):** Measures vegetative cooling.
-    $$\text{NDVI} = \frac{\text{SR}_{B5} - \text{SR}_{B4}}{\text{SR}_{B5} + \text{SR}_{B4}}$$
+    $$\text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}} = \frac{\text{Band 5} - \text{Band 4}}{\text{Band 5} + \text{Band 4}}$$
   * **NDBI (Normalized Difference Built-up Index):** Measures impervious and built-up concrete surfaces.
-    $$\text{NDBI} = \frac{\text{SR}_{B6} - \text{SR}_{B5}}{\text{SR}_{B6} + \text{SR}_{B5}}$$
+    $$\text{NDBI} = \frac{\text{SWIR} - \text{NIR}}{\text{SWIR} + \text{NIR}} = \frac{\text{Band 6} - \text{Band 5}}{\text{Band 6} + \text{Band 5}}$$
   * **Target Variable (LST):** Derived from scaled thermal band `ST_B10` and converted to degrees Celsius (°C).
 
 ---
